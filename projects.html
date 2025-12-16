@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Case Studies | Thomas Julsgaard</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Inter', 'sans-serif'],
+                            mono: ['Space Grotesk', 'monospace'],
+                        },
+                        colors: {
+                            stone: { 50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4', 800: '#292524', 900: '#1c1917' },
+                            teal: { 600: '#0d9488', 700: '#0f766e', 800: '#115e59' }
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            html { scroll-behavior: smooth; }
+            .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+            .reveal.active { opacity: 1; transform: translateY(0); }
+
+            .project-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+
+            /* Form Styles */
+            .form-input {
+                width: 100%;
+                background-color: #fafaf9; /* stone-50 */
+                border: 1px solid #e7e5e4; /* stone-200 */
+                padding: 0.75rem;
+                border-radius: 0.5rem;
+                outline: none;
+                transition: all 0.2s;
+            }
+            .form-input:focus {
+                border-color: #0d9488; /* teal-600 */
+                ring: 2px;
+                box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+            }
+        </style>
+    </head>
+
+<body class="bg-stone-50 text-stone-900 pt-20">
+
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="font-mono font-bold text-lg tracking-tighter group text-stone-900">
+                T_Julsgaard<span class="text-teal-600 group-hover:animate-pulse">_</span>
+            </a>
+            <div class="hidden md:flex gap-8"><a href="index.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-500 hover:text-teal-600">Index</a><a href="projects.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-900 border-b-2 border-teal-600 font-semibold">Work</a><a href="about.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-500 hover:text-teal-600">Profile</a><a href="contact.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-500 hover:text-teal-600">Contact</a></div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-20">
+        <header class="mb-24 reveal">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-stone-900">The Archive</h1>
+            <p class="text-xl text-stone-600 font-light max-w-2xl leading-relaxed">
+                A chronological collection of research into socio-technical networks.
+            </p>
+        </header>
+        <div class="space-y-12">
+
+    <article id="transcending" class="bg-white rounded-xl shadow-sm border border-stone-100 reveal overflow-hidden mb-16 scroll-mt-32 project-card transition-all duration-300">
+        <div class="grid md:grid-cols-12">
+            <div class="md:col-span-4 bg-stone-100 relative min-h-[500px] md:min-h-full group cursor-pointer" onclick="window.open('pdfs/Transcending the disciplinary divide.pdf', '_blank')">
+                <img src="images/Transcending the disciplinary divide.png" alt="Transcending the Disciplinary Divide" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-stone-900/40">
+                     <span class="bg-white text-stone-900 px-4 py-2 rounded font-mono text-xs uppercase tracking-widest">Read Thesis</span>
+                </div>
+            </div>
+
+            <div class="md:col-span-8 p-8 md:p-12 flex flex-col justify-center">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Network Analysis</span> <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Scopus</span> <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Epistemology</span>
+                    </div>
+                    <a href="pdfs/Transcending the disciplinary divide.pdf" target="_blank" class="text-stone-400 hover:text-teal-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold mb-2 text-stone-900">Transcending the Disciplinary Divide</h2>
+                <p class="text-lg text-stone-500 mb-8 font-light italic">Digital Methods & Interactional Expertise</p>
+                <p class="text-stone-800 mb-8 leading-relaxed font-medium">Investigating how digital methods can guide 'interactional expertise' to bridge gaps between distinct scientific disciplines.</p>
+
+                <div class="grid md:grid-cols-3 gap-8 pt-8 border-t border-stone-100">
+                    <div>
+                         <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Research Context</h4>
+                         <p class="text-stone-600 text-sm leading-relaxed">Interdisciplinary collaboration is crucial in post-normal science, yet experts often lack a shared language. We explored how to identify 'blind spots' between disciplines.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Methodology</h4>
+                        <p class="text-stone-600 text-sm leading-relaxed">Co-occurrence network analysis of 1,500 Scopus articles on Bitcoin mining combined with qualitative expert group interviews with energy engineers.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Outcomes</h4>
+                        <p class="text-stone-600 text-sm leading-relaxed">Developed a method to visualize disciplinary heterogeneity, allowing Techno-Anthropologists to strategically target where 'bridges' need to be built between experts.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-4">
+                    <a href="pdfs/Transcending the disciplinary divide.pdf" target="_blank" class="inline-block bg-stone-900 text-white px-6 py-3 rounded-md font-mono text-xs uppercase tracking-widest hover:bg-teal-600 transition">Download Full PDF</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article id="wegovy" class="bg-white rounded-xl shadow-sm border border-stone-100 reveal overflow-hidden mb-16 scroll-mt-32 project-card transition-all duration-300">
+        <div class="grid md:grid-cols-12">
+            <div class="md:col-span-4 bg-stone-100 relative min-h-[500px] md:min-h-full group cursor-pointer" onclick="window.open('pdfs/Wegovy a matter of fact.pdf', '_blank')">
+                <img src="images/Wegovy a matter of fact.png" alt="Wegovy: a matter of fa(c)t?" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-stone-900/40">
+                     <span class="bg-white text-stone-900 px-4 py-2 rounded font-mono text-xs uppercase tracking-widest">Read Thesis</span>
+                </div>
+            </div>
+
+            <div class="md:col-span-8 p-8 md:p-12 flex flex-col justify-center">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Digital Methods</span> <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Controversy Mapping</span> <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">ANT</span>
+                    </div>
+                    <a href="pdfs/Wegovy a matter of fact.pdf" target="_blank" class="text-stone-400 hover:text-teal-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold mb-2 text-stone-900">Wegovy: a matter of fa(c)t?</h2>
+                <p class="text-lg text-stone-500 mb-8 font-light italic">A Digital Ethnography</p>
+                <p class="text-stone-800 mb-8 leading-relaxed font-medium">Tracing the socio-technical controversies of the weight-loss drug Wegovy across six different digital platforms.</p>
+
+                <div class="grid md:grid-cols-3 gap-8 pt-8 border-t border-stone-100">
+                    <div>
+                         <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Research Context</h4>
+                         <p class="text-stone-600 text-sm leading-relaxed">Wegovy is not just a medical molecule; it is a cultural phenomenon intervening in concepts of body image, economics, and health policy.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Methodology</h4>
+                        <p class="text-stone-600 text-sm leading-relaxed">Scraped 150,000+ data points from Reddit, X, Mumsnet, and Scopus. Applied Actor-Network Theory (Latour's 'Matters of Concern') and network visualization.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Outcomes</h4>
+                        <p class="text-stone-600 text-sm leading-relaxed">Mapped how the 'fact' of Wegovy mutates across platforms—from a financial asset on X to a lifestyle struggle on Mumsnet—revealing it as a heterogenous network rather than a singular product.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-4">
+                    <a href="pdfs/Wegovy a matter of fact.pdf" target="_blank" class="inline-block bg-stone-900 text-white px-6 py-3 rounded-md font-mono text-xs uppercase tracking-widest hover:bg-teal-600 transition">Download Full PDF</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article id="sorte-boks" class="bg-white rounded-xl shadow-sm border border-stone-100 reveal overflow-hidden mb-16 scroll-mt-32 project-card transition-all duration-300">
+        <div class="grid md:grid-cols-12">
+            <div class="md:col-span-4 bg-stone-100 relative min-h-[500px] md:min-h-full group cursor-pointer" onclick="window.open('pdfs/Den sorte boks i den hvide verden.pdf', '_blank')">
+                <img src="images/Den sorte boks i den hvide verden.png" alt="Den sorte boks i den hvide verden" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-stone-900/40">
+                     <span class="bg-white text-stone-900 px-4 py-2 rounded font-mono text-xs uppercase tracking-widest">Read Thesis</span>
+                </div>
+            </div>
+
+            <div class="md:col-span-8 p-8 md:p-12 flex flex-col justify-center">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Praxiography</span> <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Clinical AI</span> <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Healthcare</span>
+                    </div>
+                    <a href="pdfs/Den sorte boks i den hvide verden.pdf" target="_blank" class="text-stone-400 hover:text-teal-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold mb-2 text-stone-900">Den sorte boks i den hvide verden</h2>
+                <p class="text-lg text-stone-500 mb-8 font-light italic">AI in Radiology: A Praxiographic Analysis</p>
+                <p class="text-stone-800 mb-8 leading-relaxed font-medium">An investigation into how Artificial Intelligence is practiced differently by developers, administrators, and clinicians.</p>
+
+                <div class="grid md:grid-cols-3 gap-8 pt-8 border-t border-stone-100">
+                    <div>
+                         <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Research Context</h4>
+                         <p class="text-stone-600 text-sm leading-relaxed">AI is often presented as a solution to healthcare pressure, but 'AI' means different things to a hospital director vs. a radiologist.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Methodology</h4>
+                        <p class="text-stone-600 text-sm leading-relaxed">Praxiography (Annemarie Mol) based on interviews with actors from RAIT, Radiobotics, and Herlev-Gentofte Hospital.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Outcomes</h4>
+                        <p class="text-stone-600 text-sm leading-relaxed">Identified conflicting 'logics' (Market vs. Professional vs. Administrative). Developed a translation tool to help stakeholders align their expectations of AI implementation.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-4">
+                    <a href="pdfs/Den sorte boks i den hvide verden.pdf" target="_blank" class="inline-block bg-stone-900 text-white px-6 py-3 rounded-md font-mono text-xs uppercase tracking-widest hover:bg-teal-600 transition">Download Full PDF</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article id="vr-sion" class="bg-white rounded-xl shadow-sm border border-stone-100 reveal overflow-hidden mb-16 scroll-mt-32 project-card transition-all duration-300">
+        <div class="grid md:grid-cols-12">
+            <div class="md:col-span-4 bg-stone-100 relative min-h-[500px] md:min-h-full group cursor-pointer" onclick="window.open('pdfs/Hvilken VR-sion af dig.pdf', '_blank')">
+                <img src="images/Hvilken VR-sion af dig.png" alt="Hvilken VR-sion af dig?" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-stone-900/40">
+                     <span class="bg-white text-stone-900 px-4 py-2 rounded font-mono text-xs uppercase tracking-widest">Read Thesis</span>
+                </div>
+            </div>
+
+            <div class="md:col-span-8 p-8 md:p-12 flex flex-col justify-center">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Virtual Ethnography</span> <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Postphenomenology</span> <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Identity</span>
+                    </div>
+                    <a href="pdfs/Hvilken VR-sion af dig.pdf" target="_blank" class="text-stone-400 hover:text-teal-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold mb-2 text-stone-900">Hvilken VR-sion af dig?</h2>
+                <p class="text-lg text-stone-500 mb-8 font-light italic">Virtual Ethnography in VRChat</p>
+                <p class="text-stone-800 mb-8 leading-relaxed font-medium">Exploring how social identity and bodily experience are reconstructed inside the virtual worlds of VRChat.</p>
+
+                <div class="grid md:grid-cols-3 gap-8 pt-8 border-t border-stone-100">
+                    <div>
+                         <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Research Context</h4>
+                         <p class="text-stone-600 text-sm leading-relaxed">Social VR is not just a game but a space for identity formation, particularly for socially marginalized individuals.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Methodology</h4>
+                        <p class="text-stone-600 text-sm leading-relaxed">Avatar-based ethnography and interviews within VRChat, analyzed through Verbeek’s postphenomenological framework.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Outcomes</h4>
+                        <p class="text-stone-600 text-sm leading-relaxed">Documented the phenomenon of 'Phantom Touch' and how users leverage virtual anonymity to perform and eventually integrate new aspects of their physical identity.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-4">
+                    <a href="pdfs/Hvilken VR-sion af dig.pdf" target="_blank" class="inline-block bg-stone-900 text-white px-6 py-3 rounded-md font-mono text-xs uppercase tracking-widest hover:bg-teal-600 transition">Download Full PDF</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article id="bussen" class="bg-white rounded-xl shadow-sm border border-stone-100 reveal overflow-hidden mb-16 scroll-mt-32 project-card transition-all duration-300">
+        <div class="grid md:grid-cols-12">
+            <div class="md:col-span-4 bg-stone-100 relative min-h-[500px] md:min-h-full group cursor-pointer" onclick="window.open('pdfs/Så kører bussen, selv.pdf', '_blank')">
+                <img src="images/Så kører bussen, selv.png" alt="Så kører bussen, selv" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-stone-900/40">
+                     <span class="bg-white text-stone-900 px-4 py-2 rounded font-mono text-xs uppercase tracking-widest">Read Thesis</span>
+                </div>
+            </div>
+
+            <div class="md:col-span-8 p-8 md:p-12 flex flex-col justify-center">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Autonomous Vehicles</span> <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Citizen Summit</span> <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">PTA</span>
+                    </div>
+                    <a href="pdfs/Så kører bussen, selv.pdf" target="_blank" class="text-stone-400 hover:text-teal-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold mb-2 text-stone-900">Så kører bussen, selv</h2>
+                <p class="text-lg text-stone-500 mb-8 font-light italic">Participatory Technology Assessment</p>
+                <p class="text-stone-800 mb-8 leading-relaxed font-medium">A democratic assessment of self-driving buses, focusing on trust, safety, and social accessibility.</p>
+
+                <div class="grid md:grid-cols-3 gap-8 pt-8 border-t border-stone-100">
+                    <div>
+                         <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Research Context</h4>
+                         <p class="text-stone-600 text-sm leading-relaxed">The transition to autonomous public transport is often driven by technology, overlooking the social reality of the passengers.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Methodology</h4>
+                        <p class="text-stone-600 text-sm leading-relaxed">Organized a 'Citizen Summit' (Borgertopmøde) combined with expert interviews (Movia, Holo) to facilitate democratic debate.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Outcomes</h4>
+                        <p class="text-stone-600 text-sm leading-relaxed">Concluded that passengers prioritize flexibility and cybersecurity over futuristic 'pods', recommending a gradual implementation strategy to build social trust.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-4">
+                    <a href="pdfs/Så kører bussen, selv.pdf" target="_blank" class="inline-block bg-stone-900 text-white px-6 py-3 rounded-md font-mono text-xs uppercase tracking-widest hover:bg-teal-600 transition">Download Full PDF</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article id="plantebaseret" class="bg-white rounded-xl shadow-sm border border-stone-100 reveal overflow-hidden mb-16 scroll-mt-32 project-card transition-all duration-300">
+        <div class="grid md:grid-cols-12">
+            <div class="md:col-span-4 bg-stone-100 relative min-h-[500px] md:min-h-full group cursor-pointer" onclick="window.open('pdfs/Meningstilskrivelser af plantebaseret kød.pdf', '_blank')">
+                <img src="images/Meningstilskrivelser af plantebaseret kød.png" alt="Meningstilskrivelser af plantebaseret kød" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-stone-900/40">
+                     <span class="bg-white text-stone-900 px-4 py-2 rounded font-mono text-xs uppercase tracking-widest">Read Thesis</span>
+                </div>
+            </div>
+
+            <div class="md:col-span-8 p-8 md:p-12 flex flex-col justify-center">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Food Studies</span> <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Mixed Methods</span> <span class="text-xs font-mono uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-1 rounded">Stigma</span>
+                    </div>
+                    <a href="pdfs/Meningstilskrivelser af plantebaseret kød.pdf" target="_blank" class="text-stone-400 hover:text-teal-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold mb-2 text-stone-900">Meningstilskrivelser af plantebaseret kød</h2>
+                <p class="text-lg text-stone-500 mb-8 font-light italic">Understanding Stigmatization</p>
+                <p class="text-stone-800 mb-8 leading-relaxed font-medium">Investigating the social stigma surrounding plant-based meat alternatives among Danish consumers.</p>
+
+                <div class="grid md:grid-cols-3 gap-8 pt-8 border-t border-stone-100">
+                    <div>
+                         <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Research Context</h4>
+                         <p class="text-stone-600 text-sm leading-relaxed">Despite climate goals, young Danes struggle to change dietary habits. We investigated the social friction of ordering 'fake meat'.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Methodology</h4>
+                        <p class="text-stone-600 text-sm leading-relaxed">Mixed methods approach utilizing a quantitative survey (n=954) and qualitative semi-structured interviews.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-mono text-xs font-bold text-stone-900 mb-2 uppercase tracking-wider">Outcomes</h4>
+                        <p class="text-stone-600 text-sm leading-relaxed">Found a correlation between diet type and felt stigmatization. Omnivores associate meat with 'tradition' and 'masculinity', creating a social barrier for adopting plant-based alternatives.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-4">
+                    <a href="pdfs/Meningstilskrivelser af plantebaseret kød.pdf" target="_blank" class="inline-block bg-stone-900 text-white px-6 py-3 rounded-md font-mono text-xs uppercase tracking-widest hover:bg-teal-600 transition">Download Full PDF</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+        </div>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-400 py-16 mt-20 relative z-10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start">
+            <div class="mb-8 md:mb-0">
+                <h3 class="font-mono text-stone-100 text-lg mb-2">Thomas Julsgaard</h3>
+                <p class="font-light text-sm max-w-xs">Techno-Anthropology Portfolio.<br>Aalborg University, Copenhagen.</p>
+            </div>
+            <div class="flex gap-8 font-mono text-sm">
+                <a href="projects.html" class="hover:text-teal-400 transition">Work</a>
+                <a href="about.html" class="hover:text-teal-400 transition">Profile</a>
+                <a href="contact.html" class="hover:text-teal-400 transition">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

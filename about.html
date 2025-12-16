@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile | Thomas Julsgaard</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Inter', 'sans-serif'],
+                            mono: ['Space Grotesk', 'monospace'],
+                        },
+                        colors: {
+                            stone: { 50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4', 800: '#292524', 900: '#1c1917' },
+                            teal: { 600: '#0d9488', 700: '#0f766e', 800: '#115e59' }
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            html { scroll-behavior: smooth; }
+            .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+            .reveal.active { opacity: 1; transform: translateY(0); }
+
+            .project-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+
+            /* Form Styles */
+            .form-input {
+                width: 100%;
+                background-color: #fafaf9; /* stone-50 */
+                border: 1px solid #e7e5e4; /* stone-200 */
+                padding: 0.75rem;
+                border-radius: 0.5rem;
+                outline: none;
+                transition: all 0.2s;
+            }
+            .form-input:focus {
+                border-color: #0d9488; /* teal-600 */
+                ring: 2px;
+                box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+            }
+        </style>
+    </head>
+
+<body class="bg-stone-50 text-stone-900 pt-20">
+
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="font-mono font-bold text-lg tracking-tighter group text-stone-900">
+                T_Julsgaard<span class="text-teal-600 group-hover:animate-pulse">_</span>
+            </a>
+            <div class="hidden md:flex gap-8"><a href="index.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-500 hover:text-teal-600">Index</a><a href="projects.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-500 hover:text-teal-600">Work</a><a href="about.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-900 border-b-2 border-teal-600 font-semibold">Profile</a><a href="contact.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-500 hover:text-teal-600">Contact</a></div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-20">
+        <header class="mb-16 reveal grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                 <img src="images/Profile.jpg" class="rounded-xl shadow-lg rotate-2 hover:rotate-0 transition-transform duration-500 w-full object-cover">
+            </div>
+            <div>
+                <h1 class="text-4xl font-bold mb-6">Investigating the 'Why'.</h1>
+                <div class="prose prose-lg text-stone-600 font-light leading-relaxed space-y-6">
+                    <p>
+                        I am an educated <strong>Techno-Anthropologist</strong> from Aalborg University, Copenhagen. 
+                        While engineers build the 'how' of technology, I study the 'why'—and more importantly, the 'so what?'
+                    </p>
+                    <p>
+                        My work exists at the intersection of human culture and technical systems. I focus on understanding 
+                        complex social systems that technology often fails to account for, using a mixed-method toolbox that 
+                        ranges from digital scrapping and network analysis to deep ethnographic immersion.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid md:grid-cols-2 gap-12 mb-20 reveal">
+            <section class="bg-white p-8 rounded-xl border border-stone-100 shadow-sm h-full">
+                <h2 class="font-mono text-sm font-bold uppercase tracking-widest border-b border-stone-100 pb-4 mb-6 text-teal-600">Core Competencies</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-stone-900 rounded-full"></span><span class="text-stone-700">Ethnographic Fieldwork</span></li><li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-stone-900 rounded-full"></span><span class="text-stone-700">Socio-Technical Analysis</span></li><li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-stone-900 rounded-full"></span><span class="text-stone-700">Digital Methods (Gephi/Scraping)</span></li><li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-stone-900 rounded-full"></span><span class="text-stone-700">Participatory Design</span></li><li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-stone-900 rounded-full"></span><span class="text-stone-700">Interactional Expertise</span></li><li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-stone-900 rounded-full"></span><span class="text-stone-700">Actor-Network Theory (ANT)</span></li><li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-stone-900 rounded-full"></span><span class="text-stone-700">Praxiography</span></li><li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-stone-900 rounded-full"></span><span class="text-stone-700">Qualitative & Quantitative Analysis</span></li>
+                </ul>
+            </section>
+
+            <section class="bg-stone-900 text-stone-100 p-8 rounded-xl shadow-sm h-full flex flex-col justify-between">
+                <div>
+                    <h2 class="font-mono text-sm font-bold uppercase tracking-widest border-b border-stone-700 pb-4 mb-6 text-teal-400">Education</h2>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold">Techno-Anthropology</h3>
+                        <p class="text-stone-400 font-mono text-sm">Aalborg University, Copenhagen</p>
+                        <p class="text-stone-500 text-sm mt-1">Focus on Responsible Innovation & Interactional Expertise.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-400 py-16 mt-20 relative z-10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start">
+            <div class="mb-8 md:mb-0">
+                <h3 class="font-mono text-stone-100 text-lg mb-2">Thomas Julsgaard</h3>
+                <p class="font-light text-sm max-w-xs">Techno-Anthropology Portfolio.<br>Aalborg University, Copenhagen.</p>
+            </div>
+            <div class="flex gap-8 font-mono text-sm">
+                <a href="projects.html" class="hover:text-teal-400 transition">Work</a>
+                <a href="about.html" class="hover:text-teal-400 transition">Profile</a>
+                <a href="contact.html" class="hover:text-teal-400 transition">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

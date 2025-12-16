@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact | Thomas Julsgaard</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Inter', 'sans-serif'],
+                            mono: ['Space Grotesk', 'monospace'],
+                        },
+                        colors: {
+                            stone: { 50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4', 800: '#292524', 900: '#1c1917' },
+                            teal: { 600: '#0d9488', 700: '#0f766e', 800: '#115e59' }
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            html { scroll-behavior: smooth; }
+            .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+            .reveal.active { opacity: 1; transform: translateY(0); }
+
+            .project-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+
+            /* Form Styles */
+            .form-input {
+                width: 100%;
+                background-color: #fafaf9; /* stone-50 */
+                border: 1px solid #e7e5e4; /* stone-200 */
+                padding: 0.75rem;
+                border-radius: 0.5rem;
+                outline: none;
+                transition: all 0.2s;
+            }
+            .form-input:focus {
+                border-color: #0d9488; /* teal-600 */
+                ring: 2px;
+                box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+            }
+        </style>
+    </head>
+
+<body class="bg-stone-50 text-stone-900 pt-20 flex flex-col min-h-screen">
+
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="font-mono font-bold text-lg tracking-tighter group text-stone-900">
+                T_Julsgaard<span class="text-teal-600 group-hover:animate-pulse">_</span>
+            </a>
+            <div class="hidden md:flex gap-8"><a href="index.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-500 hover:text-teal-600">Index</a><a href="projects.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-500 hover:text-teal-600">Work</a><a href="about.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-500 hover:text-teal-600">Profile</a><a href="contact.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-900 border-b-2 border-teal-600 font-semibold">Contact</a></div>
+        </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center px-6 py-20">
+        <div class="max-w-6xl w-full reveal">
+            <div class="grid md:grid-cols-2 gap-16 items-start">
+
+                <div>
+                    <p class="font-mono text-teal-600 mb-6 tracking-widest uppercase">Signal</p>
+                    <h1 class="text-6xl md:text-7xl font-bold mb-8 tracking-tight text-stone-900">Let's Interface.</h1>
+                    <p class="text-xl text-stone-600 mb-12 font-light leading-relaxed">
+                        I am available for research collaborations, socio-technical consultancy, and digital ethnography projects.
+                        <br><br>
+                        Connect with me via social media or use the form to send a secure transmission.
+                    </p>
+
+                    <div class="flex flex-col gap-4">
+                        <a href="https://www.linkedin.com/in/thomasjulsgaard/" target="_blank" class="flex items-center gap-4 group p-4 border border-stone-200 rounded-lg bg-white hover:border-teal-500 transition-all duration-300">
+                            <div class="w-10 h-10 flex items-center justify-center bg-stone-100 rounded-full group-hover:bg-teal-50">
+                                <svg class="w-5 h-5 text-stone-600 group-hover:text-teal-700" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </div>
+                            <span class="font-mono text-sm uppercase tracking-wider text-stone-600 group-hover:text-stone-900">/thomasjulsgaard</span>
+                        </a>
+                        <a href="https://github.com/T-Julsgaard" target="_blank" class="flex items-center gap-4 group p-4 border border-stone-200 rounded-lg bg-white hover:border-teal-500 transition-all duration-300">
+                            <div class="w-10 h-10 flex items-center justify-center bg-stone-100 rounded-full group-hover:bg-teal-50">
+                                <svg class="w-5 h-5 text-stone-600 group-hover:text-teal-700" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </div>
+                            <span class="font-mono text-sm uppercase tracking-wider text-stone-600 group-hover:text-stone-900">/T-Julsgaard</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block font-mono text-xs uppercase tracking-widest text-stone-500 mb-2">Name</label>
+                                <input type="text" name="name" required class="form-input">
+                            </div>
+                            <div>
+                                <label class="block font-mono text-xs uppercase tracking-widest text-stone-500 mb-2">Email</label>
+                                <input type="email" name="_replyto" required class="form-input">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block font-mono text-xs uppercase tracking-widest text-stone-500 mb-2">Subject</label>
+                            <input type="text" name="subject" class="form-input">
+                        </div>
+                        <div>
+                            <label class="block font-mono text-xs uppercase tracking-widest text-stone-500 mb-2">Message</label>
+                            <textarea name="message" required rows="5" class="form-input"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-stone-900 text-white py-4 rounded-lg font-mono text-xs uppercase tracking-widest hover:bg-teal-600 transition-colors duration-300 shadow-lg">
+                            Send Transmission
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-400 py-16 mt-20 relative z-10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start">
+            <div class="mb-8 md:mb-0">
+                <h3 class="font-mono text-stone-100 text-lg mb-2">Thomas Julsgaard</h3>
+                <p class="font-light text-sm max-w-xs">Techno-Anthropology Portfolio.<br>Aalborg University, Copenhagen.</p>
+            </div>
+            <div class="flex gap-8 font-mono text-sm">
+                <a href="projects.html" class="hover:text-teal-400 transition">Work</a>
+                <a href="about.html" class="hover:text-teal-400 transition">Profile</a>
+                <a href="contact.html" class="hover:text-teal-400 transition">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
