@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact | Thomas Julsgaard</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Inter', 'sans-serif'],
+                            mono: ['Space Grotesk', 'monospace'],
+                        },
+                        colors: {
+                            stone: { 50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4', 800: '#292524', 900: '#1c1917' },
+                            teal: { 600: '#0d9488', 700: '#0f766e', 800: '#115e59', 900: '#134e4a' }
+                        },
+                        animation: {
+                            'fade-up': 'fadeUp 0.8s ease-out forwards',
+                        },
+                        keyframes: {
+                            fadeUp: {
+                                '0%': { opacity: '0', transform: 'translateY(15px)' },
+                                '100%': { opacity: '1', transform: 'translateY(0)' },
+                            },
+                            popOut: {
+                                '0%': { transform: 'scale(1)' },
+                                '40%': { transform: 'scale(1.15)' },
+                                '100%': { transform: 'scale(0)', opacity: '0' },
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            html { scroll-behavior: smooth; overflow-x: hidden; }
+            body { overflow-x: hidden; width: 100%; }
+            .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+            .reveal.active { opacity: 1; transform: translateY(0); }
+            .project-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05); }
+            .skill-card { transition: all 0.3s ease; }
+            .skill-card:hover { border-color: #0d9488; transform: translateY(-3px); }
+            .hidden { display: none; }
+            #mobile-menu { transition: max-height 0.3s ease-in-out; max-height: 0; overflow: hidden; }
+            #mobile-menu.open { max-height: 100vh; }
+            .pop-out { animation: popOut 0.4s ease-in forwards !important; pointer-events: none; }
+            .exp-logo { transition: transform 0.3s ease; }
+            .exp-logo:hover { transform: scale(1.05); }
+            .modern-input { width: 100%; background-color: #fafaf9; border: none; border-radius: 8px; padding: 16px; font-size: 0.95rem; color: #1c1917; box-shadow: inset 0 1px 2px rgba(0,0,0,0.06); transition: all 0.2s ease; }
+            .modern-input:focus { background-color: #ffffff; box-shadow: 0 0 0 2px #0d9488, 0 4px 6px -1px rgba(0, 0, 0, 0.1); outline: none; }
+            .modern-label { display: block; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #57534e; margin-bottom: 0.5rem; font-weight: 700; }
+            #runaway-btn { position: absolute; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); left: 1.5rem; top: 0; }
+        </style>
+    </head>
+
+<body class="bg-stone-50 text-stone-900 pt-20 flex flex-col min-h-screen">
+
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="font-mono font-bold text-lg tracking-tighter group text-stone-900">
+                T_Julsgaard<span class="text-teal-600">.exe</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <div class="flex gap-8">
+
+        <a href="index.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-500 hover:text-teal-600">
+            <span class="lang-en">Index</span><span class="lang-da hidden">Forside</span>
+        </a>
+
+        <a href="casestudies.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-500 hover:text-teal-600">
+            <span class="lang-en">Case Studies</span><span class="lang-da hidden">Case studier</span>
+        </a>
+
+        <a href="experience.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-500 hover:text-teal-600">
+            <span class="lang-en">Work Experience</span><span class="lang-da hidden">Arbejdserfaring</span>
+        </a>
+
+        <a href="profile.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-500 hover:text-teal-600">
+            <span class="lang-en">Profile</span><span class="lang-da hidden">Profil</span>
+        </a>
+
+        <a href="contact.html" class="font-mono text-sm uppercase tracking-widest py-1 transition-all duration-300 text-stone-900 border-b-2 border-teal-600 font-semibold">
+            <span class="lang-en">Contact</span><span class="lang-da hidden">Kontakt</span>
+        </a>
+
+                </div>
+                <div class="flex items-center gap-2 font-mono text-xs border border-stone-200 rounded-full px-1 py-1">
+                    <button onclick="setLang('en')" id="btn-en" class="px-3 py-1 rounded-full transition-colors bg-stone-900 text-white">EN</button>
+                    <button onclick="setLang('da')" id="btn-da" class="px-3 py-1 rounded-full transition-colors text-stone-500 hover:text-stone-900">DA</button>
+                </div>
+            </div>
+
+            <div class="md:hidden flex items-center gap-4">
+                <div class="flex items-center gap-1 font-mono text-[10px] border border-stone-200 rounded-full px-1 py-1">
+                    <button onclick="setLang('en')" id="btn-en-mob" class="px-2 py-1 rounded-full transition-colors bg-stone-900 text-white">EN</button>
+                    <button onclick="setLang('da')" id="btn-da-mob" class="px-2 py-1 rounded-full transition-colors text-stone-500 hover:text-stone-900">DA</button>
+                </div>
+                <button id="mobile-menu-btn" class="text-stone-900 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden bg-white border-b border-stone-200 px-6">
+
+        <a href="index.html" class="block py-3 border-b border-stone-100 font-mono text-sm uppercase tracking-widest text-stone-600 hover:text-teal-600">
+            <span class="lang-en">Index</span><span class="lang-da hidden">Forside</span>
+        </a>
+
+        <a href="casestudies.html" class="block py-3 border-b border-stone-100 font-mono text-sm uppercase tracking-widest text-stone-600 hover:text-teal-600">
+            <span class="lang-en">Case Studies</span><span class="lang-da hidden">Case studier</span>
+        </a>
+
+        <a href="experience.html" class="block py-3 border-b border-stone-100 font-mono text-sm uppercase tracking-widest text-stone-600 hover:text-teal-600">
+            <span class="lang-en">Work Experience</span><span class="lang-da hidden">Arbejdserfaring</span>
+        </a>
+
+        <a href="profile.html" class="block py-3 border-b border-stone-100 font-mono text-sm uppercase tracking-widest text-stone-600 hover:text-teal-600">
+            <span class="lang-en">Profile</span><span class="lang-da hidden">Profil</span>
+        </a>
+
+        <a href="contact.html" class="block py-3 border-b border-stone-100 font-mono text-sm uppercase tracking-widest text-stone-600 hover:text-teal-600">
+            <span class="lang-en">Contact</span><span class="lang-da hidden">Kontakt</span>
+        </a>
+
+        </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center px-6 py-10 md:py-20 overflow-hidden">
+        <div class="max-w-6xl w-full reveal">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+                <div>
+                    <p class="font-mono text-teal-600 mb-4 md:mb-6 tracking-widest uppercase">Contact</p>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 md:mb-8 tracking-tight text-stone-900">
+                        <span class="lang-en">Let's get in touch.</span><span class="lang-da hidden whitespace-nowrap">Lad os tage en snak.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-stone-600 mb-8 md:mb-12 font-light leading-relaxed">
+                        <span class="lang-en">I am always open to discussing research collaborations, consultancy opportunities, or new projects.</span>
+                        <span class="lang-da hidden">Jeg er altid åben for at diskutere forskningssamarbejder, konsulentmuligheder eller nye projekter.</span>
+                    </p>
+                    <div class="flex flex-col gap-4">
+                        <a href="https://www.linkedin.com/in/thomasjulsgaard/" target="_blank" class="flex items-center gap-4 group p-4 border border-stone-200 rounded-lg bg-white hover:border-teal-500 transition-all duration-300">
+                            <div class="w-10 h-10 flex flex-center items-center justify-center bg-stone-100 rounded-full group-hover:bg-teal-50">
+                                <svg class="w-5 h-5 text-stone-600 group-hover:text-teal-700" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </div>
+                            <span class="font-mono text-xs md:text-sm uppercase tracking-wider text-stone-600 group-hover:text-stone-900 truncate">/thomasjulsgaard</span>
+                        </a>
+                        <a href="https://github.com/T-Julsgaard" target="_blank" class="flex items-center gap-4 group p-4 border border-stone-200 rounded-lg bg-white hover:border-teal-500 transition-all duration-300">
+                            <div class="w-10 h-10 flex flex-center items-center justify-center bg-stone-100 rounded-full group-hover:bg-teal-50">
+                                <svg class="w-5 h-5 text-stone-600 group-hover:text-teal-700" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </div>
+                            <span class="font-mono text-xs md:text-sm uppercase tracking-wider text-stone-600 group-hover:text-stone-900 truncate">/T-Julsgaard</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-stone-100 w-full max-w-full">
+                    <form action="https://formspree.io/f/mbdlvnjo" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="modern-label">
+                                    <span class="lang-en">Name</span><span class="lang-da hidden">Navn</span>
+                                </label>
+                                <input type="text" name="name" required class="modern-input">
+                            </div>
+                            <div>
+                                <label class="modern-label">Email</label>
+                                <input type="email" name="_replyto" required class="modern-input">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="modern-label">
+                                <span class="lang-en">Subject</span><span class="lang-da hidden">Emne</span>
+                            </label>
+                            <input type="text" name="subject" class="modern-input">
+                        </div>
+                        <div>
+                            <label class="modern-label">
+                                <span class="lang-en">Message</span><span class="lang-da hidden">Besked</span>
+                            </label>
+                            <textarea name="message" required rows="5" class="modern-input"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-stone-900 text-white py-4 rounded-lg font-mono text-xs uppercase tracking-widest hover:bg-teal-600 transition-colors duration-300 shadow-lg">
+                            <span class="lang-en">Send Message</span><span class="lang-da hidden">Send Besked</span>
+                        </button>
+                        <input type="text" name="_gotcha" style="display:none">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-400 py-16 mt-20 relative z-10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-8">
+            <div class="mb-4 md:mb-0">
+                <h3 class="font-mono text-stone-100 text-lg mb-2">Thomas Julsgaard</h3>
+                <p class="font-light text-sm max-w-xs">
+                    <span class="lang-en">Techno-Anthropologist.</span>
+                    <span class="lang-da hidden">Teknoantropolog.</span>
+                </p>
+            </div>
+            <div class="flex flex-wrap gap-6 font-mono text-sm">
+                <a href="contact.html" class="hover:text-teal-400 transition"><span class="lang-en">Contact</span><span class="lang-da hidden">Kontakt</span></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function setLang(lang) {
+            sessionStorage.setItem('preferredLang', lang);
+            const enElements = document.querySelectorAll('.lang-en');
+            const daElements = document.querySelectorAll('.lang-da');
+
+            const btnsEn = [document.getElementById('btn-en'), document.getElementById('btn-en-mob')];
+            const btnsDa = [document.getElementById('btn-da'), document.getElementById('btn-da-mob')];
+
+            if (lang === 'da') {
+                enElements.forEach(el => el.classList.add('hidden'));
+                daElements.forEach(el => el.classList.remove('hidden'));
+
+                btnsDa.forEach(b => { if(b) b.className = "px-3 py-1 rounded-full transition-colors bg-stone-900 text-white"; });
+                btnsEn.forEach(b => { if(b) b.className = "px-3 py-1 rounded-full transition-colors text-stone-500 hover:text-stone-900"; });
+                if(document.getElementById('btn-en-mob')) document.getElementById('btn-en-mob').classList.replace('px-3', 'px-2');
+                if(document.getElementById('btn-da-mob')) document.getElementById('btn-da-mob').classList.replace('px-3', 'px-2');
+            } else {
+                daElements.forEach(el => el.classList.add('hidden'));
+                enElements.forEach(el => el.classList.remove('hidden'));
+
+                btnsEn.forEach(b => { if(b) b.className = "px-3 py-1 rounded-full transition-colors bg-stone-900 text-white"; });
+                btnsDa.forEach(b => { if(b) b.className = "px-3 py-1 rounded-full transition-colors text-stone-500 hover:text-stone-900"; });
+                if(document.getElementById('btn-en-mob')) document.getElementById('btn-en-mob').classList.replace('px-3', 'px-2');
+                if(document.getElementById('btn-da-mob')) document.getElementById('btn-da-mob').classList.replace('px-3', 'px-2');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = sessionStorage.getItem('preferredLang') || 'en';
+            setLang(savedLang);
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if(menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('open');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
